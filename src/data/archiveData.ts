@@ -28,7 +28,7 @@ export const archiveData: ClusterData[] = [
     color: "from-amber-700 to-yellow-800",
     x: 13,
     y: 17,
-    radius: 10,
+    radius: 7,
     minZoomLevel: 0,
     items: [
       {
@@ -60,7 +60,7 @@ export const archiveData: ClusterData[] = [
     color: "from-yellow-400 to-green-500",
     x: 41,
     y: 16,
-    radius: 14,
+    radius: 10,
     minZoomLevel: 0,
     items: [
       {
@@ -90,9 +90,9 @@ export const archiveData: ClusterData[] = [
     title: "КОЛЛЕКТИВНОЕ СОЗНАНИЕ",
     description: "Единое поле сознания всех существ. Место встречи всех мыслей и намерений. Универсальное знание, доступное через медитацию и сострадание.",
     color: "from-green-500 to-emerald-600",
-    x: 64,
+    x: 65,
     y: 17,
-    radius: 9,
+    radius: 7,
     minZoomLevel: 0,
     items: [
       {
@@ -122,9 +122,9 @@ export const archiveData: ClusterData[] = [
     title: "РАДУЖНОЕ ТЕЛО / ДЗОГЧЕН",
     description: "Тибетская практика трансмутации физического тела в чистый свет. Дзогчен - путь совершенства. Возвращение в источник через 50-70 дней медитации.",
     color: "from-purple-400 to-violet-700",
-    x: 87,
+    x: 88,
     y: 19,
-    radius: 9,
+    radius: 7,
     minZoomLevel: 0,
     items: [
       {
@@ -176,9 +176,9 @@ export const archiveData: ClusterData[] = [
     title: "КОЛЬЦА САТУРНА",
     description: "Искусственные структуры - портальные системы и учебные станции. Звезда Смерти. Энергетические барьеры для контроля эволюции.",
     color: "from-yellow-700 to-amber-900",
-    x: 23,
+    x: 22,
     y: 39,
-    radius: 9,
+    radius: 7,
     minZoomLevel: 0,
     items: [
       {
@@ -236,7 +236,7 @@ export const archiveData: ClusterData[] = [
     color: "from-orange-500 to-red-600",
     x: 63,
     y: 46,
-    radius: 10,
+    radius: 8,
     minZoomLevel: 0,
     items: [
       {
@@ -266,9 +266,9 @@ export const archiveData: ClusterData[] = [
     title: "СУПЕРФЕДЕРАЦИЯ",
     description: "Объединение всех федераций мультивселенной. Большой Эксперимент. Генетическая манипуляция для создания идеального сознания.",
     color: "from-indigo-700 to-blue-900",
-    x: 79,
+    x: 80,
     y: 49,
-    radius: 8,
+    radius: 7,
     minZoomLevel: 0,
     items: [
       {
@@ -332,9 +332,9 @@ export const archiveData: ClusterData[] = [
     title: "ТАЙНАЯ КОСМИЧЕСКАЯ ПРОГРАММА",
     description: "ВЕЛИЧАЙШИЙ СКРЫТЫЙ ПРОЕКТ ЧЕЛОВЕЧЕСТВА. Чёрный бюджет, звёздный флот, межпланетный транспорт. Информаторы раскрывают правду о ВКС и чёрных проектах.",
     color: "from-green-700 to-teal-900",
-    x: 34,
+    x: 33,
     y: 58,
-    radius: 18,
+    radius: 15,
     minZoomLevel: 0,
     items: [
       {
@@ -376,9 +376,9 @@ export const archiveData: ClusterData[] = [
     title: "ГАЛАКТИЧЕСКАЯ ФЕДЕРАЦИЯ",
     description: "Союз просвещённых цивилизаций. Наблюдают и помогают человечеству. Телепортация, порталы, служение всевышнему божеству.",
     color: "from-cyan-500 to-teal-700",
-    x: 66,
+    x: 67,
     y: 61,
-    radius: 12,
+    radius: 10,
     minZoomLevel: 0,
     items: [
       {
@@ -414,9 +414,9 @@ export const archiveData: ClusterData[] = [
     title: "BASHAR / 5D ЗЕМЛЯ",
     description: "Внеземной учитель из 5-го измерения. Вознесение тонкого тела. Эффект Мандела. Эра Водолея. Переход на новую землю в 5D.",
     color: "from-violet-600 to-indigo-800",
-    x: 64,
-    y: 73,
-    radius: 7,
+    x: 65,
+    y: 74,
+    radius: 6,
     minZoomLevel: 0,
     items: [
       {
@@ -452,9 +452,9 @@ export const archiveData: ClusterData[] = [
     title: "ЗАКОН ОДНОГО",
     description: "Первопринцип вселенной. Все одно, одно есть все. Дэвид Уилкок. Частота 1111 - космическая связь.",
     color: "from-blue-600 to-blue-800",
-    x: 74,
-    y: 67,
-    radius: 5,
+    x: 75,
+    y: 68,
+    radius: 4,
     minZoomLevel: 0,
     items: [
       {
@@ -482,7 +482,7 @@ export const archiveData: ClusterData[] = [
     color: "from-red-600 to-pink-700",
     x: 22,
     y: 85,
-    radius: 14,
+    radius: 11,
     minZoomLevel: 0,
     items: [
       {
@@ -532,7 +532,7 @@ export const archiveData: ClusterData[] = [
     color: "from-blue-600 to-cyan-800",
     x: 49,
     y: 82,
-    radius: 14,
+    radius: 11,
     minZoomLevel: 0,
     items: [
       {
@@ -588,7 +588,7 @@ export const archiveData: ClusterData[] = [
     color: "from-gray-500 to-slate-800",
     x: 83,
     y: 76,
-    radius: 12,
+    radius: 10,
     minZoomLevel: 0,
     items: [
       {
