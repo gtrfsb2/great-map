@@ -1,17 +1,28 @@
 import { useState } from 'react';
 import { useZUI } from './hooks/useZUI';
+import { useTerms } from './hooks/useTerms';
 import { Modal } from './components/Modal';
-import { archiveData, ClusterData, ClusterItem } from './data/archiveData';
+import { TermPage } from './components/TermPage';
+import { ClusterItem } from './data/archiveData';
 
 export default function App() {
   const zui = useZUI();
+  const {
+    terms,
+    isLoaded,
+    updateTermDescription,
+    updateTermTitle,
+    updateItemDescription,
+    moveTermUp,
+    moveTermDown,
+    getTermById,
+    getTermIndex,
+  } = useTerms();
   const [modalData, setModalData] = useState<{ title: string; description: string } | null>(null);
+  const [selectedTermId, setSelectedTermId] = useState<string | null>(null);
 
-  const handleClusterClick = (cluster: ClusterData) => {
-    setModalData({
-      title: cluster.title,
-      description: cluster.description,
-    });
+  const handleClusterClick = (termId: string) => {
+    setSelectedTermId(termId);
   };
 
   const handleItemClick = (item: ClusterItem, e: React.MouseEvent) => {
