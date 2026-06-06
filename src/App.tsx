@@ -27,6 +27,10 @@ export default function App() {
   };
 
   const getVisibleClusters = (): ClusterData[] => {
+    // На малом зуме показываем только крупные кластеры
+    if (zui.zoom < 0.6) {
+      return archiveData.filter((c) => c.radius > 55);
+    }
     return archiveData.filter((cluster) => cluster.minZoomLevel <= Math.floor(zui.zoom * 2));
   };
 
@@ -158,8 +162,8 @@ export default function App() {
 
         .zui-canvas {
           position: absolute;
-          width: 200%;
-          height: 200%;
+          width: 300%;
+          height: 300%;
           transition: transform 0.05s ease-out;
         }
 
