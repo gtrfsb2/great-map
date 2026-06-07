@@ -150,6 +150,7 @@ export default function App() {
           position: relative;
           cursor: grab;
           cursor: -webkit-grab;
+          z-index: 1;
         }
 
         .zui-viewport:active {
@@ -216,19 +217,26 @@ export default function App() {
         }
 
         .cluster-item {
-          background: rgba(0, 0, 0, 0.5);
+          background: rgba(0, 0, 0, 0.6);
           padding: 5px 6px;
           border-radius: 3px;
           cursor: pointer;
-          border: 1px solid rgba(255, 255, 255, 0.4);
+          border: 1.5px solid rgba(255, 255, 255, 0.5);
           transition: all 0.2s;
           backdrop-filter: blur(5px);
+          z-index: 10;
         }
 
         .cluster-item:hover {
-          background: rgba(139, 92, 246, 0.4);
-          border-color: rgba(255, 255, 255, 0.8);
-          transform: translateX(2px);
+          background: rgba(139, 92, 246, 0.5);
+          border-color: rgba(255, 255, 255, 1);
+          transform: translateX(2px) scale(1.05);
+          box-shadow: 0 0 10px rgba(139, 92, 246, 0.6);
+        }
+
+        .cluster-item:active {
+          background: rgba(139, 92, 246, 0.7);
+          transform: translateX(2px) scale(0.95);
         }
 
         .item-title {
@@ -241,7 +249,7 @@ export default function App() {
         }
 
         .zui-controls {
-          position: absolute;
+          position: fixed;
           bottom: 30px;
           right: 30px;
           background: rgba(20, 20, 40, 0.8);
@@ -251,7 +259,7 @@ export default function App() {
           display: flex;
           align-items: center;
           gap: 8px;
-          z-index: 40;
+          z-index: 100;
           backdrop-filter: blur(15px);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
@@ -286,7 +294,7 @@ export default function App() {
         }
 
         .zui-info {
-          position: absolute;
+          position: fixed;
           top: 20px;
           left: 20px;
           background: rgba(20, 20, 40, 0.8);
@@ -295,7 +303,7 @@ export default function App() {
           padding: 16px 20px;
           color: #d1d5db;
           font-size: 12px;
-          z-index: 40;
+          z-index: 100;
           backdrop-filter: blur(15px);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
