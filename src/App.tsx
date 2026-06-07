@@ -1,28 +1,14 @@
 import { useState } from 'react';
 import { useZUI } from './hooks/useZUI';
-import { useTerms } from './hooks/useTerms';
 import { Modal } from './components/Modal';
-import { TermPage } from './components/TermPage';
-import { ClusterItem } from './data/archiveData';
+import { archiveData, ClusterData, ClusterItem } from './data/archiveData';
 
 export default function App() {
   const zui = useZUI();
-  const {
-    terms,
-    isLoaded,
-    updateTermDescription,
-    updateTermTitle,
-    updateItemDescription,
-    moveTermUp,
-    moveTermDown,
-    getTermById,
-    getTermIndex,
-  } = useTerms();
   const [modalData, setModalData] = useState<{ title: string; description: string } | null>(null);
-  const [selectedTermId, setSelectedTermId] = useState<string | null>(null);
 
-  const handleClusterClick = (termId: string) => {
-    setSelectedTermId(termId);
+  const handleClusterClick = () => {
+    // Логика клика на кластер
   };
 
   const handleItemClick = (item: ClusterItem, e: React.MouseEvent) => {
@@ -40,7 +26,7 @@ export default function App() {
   const getVisibleClusters = (): ClusterData[] => {
     // На малом зуме показываем только крупные кластеры
     if (zui.zoom < 0.6) {
-      return archiveData.filter((c) => c.radius > 55);
+      return archiveData.filter((c) => c.radius > 5);
     }
     return archiveData.filter((cluster) => cluster.minZoomLevel <= Math.floor(zui.zoom * 2));
   };

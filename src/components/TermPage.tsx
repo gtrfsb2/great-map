@@ -107,7 +107,7 @@ export function TermPage({
           <div className="term-items-section">
             <h2>Связанные элементы</h2>
             <div className="items-list">
-              {term.items.map((item, index) => (
+              {term.items.map((item) => (
                 <div key={item.id} className="item-card">
                   <div className="item-header">
                     <h3 className="item-title">{item.title}</h3>
