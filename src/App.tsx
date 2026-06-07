@@ -7,7 +7,7 @@ export default function App() {
   const zui = useZUI();
   const [modalData, setModalData] = useState<{ title: string; description: string } | null>(null);
 
-  const handleClusterClick = () => {
+  const handleClusterClick = (_cluster: ClusterData) => {
     // Логика клика на кластер
   };
 
