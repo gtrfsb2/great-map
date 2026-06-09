@@ -1,3 +1,5 @@
+import { DebugPanel } from './DebugPanel';
+
 export default function App() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-50 via-white to-zinc-100 p-8">
@@ -23,6 +25,7 @@ export default function App() {
           <p className="text-slate-500">Start prompting to build your app.</p>
         </div>
       </div>
+      <DebugPanel />
     </div>
   );
 }
