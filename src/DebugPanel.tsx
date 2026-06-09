@@ -95,7 +95,7 @@ const BTN_BASE: React.CSSProperties = {
 };
 
 // ─── LogRow ─────────────────────────────────────────────────────────────────
-function LogRow({
+const LogRow = React.memo(function LogRow({
   log,
   relativeTime,
   onToggleStar,
@@ -185,10 +185,10 @@ function LogRow({
       </button>
     </div>
   );
-}
+});
 
 // ─── PerformanceTab ─────────────────────────────────────────────────────────
-function PerformanceTab() {
+const PerformanceTab = React.memo(function PerformanceTab() {
   const [snapshots, setSnapshots] = useState<PerfSnapshot[]>([]);
   const lastTimeRef = useRef(performance.now());
 
@@ -254,10 +254,10 @@ function PerformanceTab() {
       </div>
     </div>
   );
-}
+});
 
 // ─── NetworkTab ─────────────────────────────────────────────────────────────
-function NetworkTab({ entries }: { entries: NetworkEntry[] }) {
+const NetworkTab = React.memo(function NetworkTab({ entries }: { entries: NetworkEntry[] }) {
   return (
     <div style={{ padding: '4px 0', fontSize: '10px' }}>
       {entries.length === 0 && (
@@ -288,7 +288,7 @@ function NetworkTab({ entries }: { entries: NetworkEntry[] }) {
       ))}
     </div>
   );
-}
+});
 
 // ─── Main Panel ─────────────────────────────────────────────────────────────
 export function DebugPanel() {
@@ -384,6 +384,7 @@ export function DebugPanel() {
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
+      if (target.closest('[data-debug-panel]')) return;
       const tag = target.tagName.toLowerCase();
       const cls = Array.from(target.classList).slice(0, 3).join('.');
       const id = target.id ? `#${target.id}` : '';
@@ -571,6 +572,7 @@ export function DebugPanel() {
     <>
       {/* Toggle button */}
       <button
+        data-debug-panel
         onClick={() => setOpen(o => !o)}
         title="Debug Panel (Ctrl+Shift+D)"
         style={{
@@ -614,6 +616,7 @@ export function DebugPanel() {
             backdropFilter: 'blur(16px)',
             fontFamily: "'SF Mono', 'Fira Code', 'Cascadia Code', monospace",
           }}
+          data-debug-panel
           onClick={e => e.stopPropagation()}
         >
           {/* Header */}
